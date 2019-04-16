@@ -11,6 +11,11 @@ public class Helper implements java.io.Serializable {
 
     public Helper() {
     }
+    
+    public boolean followOnOrder() {
+        //TODO
+        return true;
+    }
 
     public long daysBetweenDates(XMLGregorianCalendar firstDate, XMLGregorianCalendar secondDate) {
         return ChronoUnit.DAYS.between(firstDate.toGregorianCalendar().toZonedDateTime().toLocalDate(), secondDate.toGregorianCalendar().toZonedDateTime().toLocalDate());
