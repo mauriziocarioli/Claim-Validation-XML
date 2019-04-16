@@ -11,17 +11,17 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>local</id>
-        <url>/home/ec2-user/.m2/repository</url>
-        <source>LOCAL</source>
+        <id>RH-ER</id>
+        <url>https://maven.repository.redhat.com/earlyaccess/all</url>
+        <source>SETTINGS</source>
       </metadata>
     </repository>
     <repository>
       <include>true</include>
       <metadata>
-        <id>RH-ER</id>
-        <url>https://maven.repository.redhat.com/earlyaccess/all</url>
-        <source>SETTINGS</source>
+        <id>local</id>
+        <url>/home/ec2-user/.m2/repository</url>
+        <source>LOCAL</source>
       </metadata>
     </repository>
     <repository>
