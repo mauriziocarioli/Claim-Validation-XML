@@ -1,9 +1,0 @@
-package citrite;
-
-import java.lang.Number;
-
-rule "SomeRule"
-	dialect "mvel"
-	when
-	then
-end
