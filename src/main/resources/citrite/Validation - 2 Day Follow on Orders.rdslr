@@ -2,7 +2,7 @@ package citrite;
 
 import java.lang.Number;
 
-rule "Some Rule"
+rule "Validation - 2 Day Follow on Orders"
 	dialect "mvel"
 	when
 		>bre : BREObjectSFDC( orderID : request.order.orderHeader.orderID, d1 : request.order.orderHeader.orderCreationDate, d2 : request.originalOrder.creationDate)
