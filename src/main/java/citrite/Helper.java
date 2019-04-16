@@ -15,5 +15,9 @@ public class Helper implements java.io.Serializable {
     public static long daysBetweenDates(Date firstDate, Date secondDate) {
         return ChronoUnit.DAYS.between(firstDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), secondDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
     }
+    
+    public static void registerValidationBREObjectSFDC breObjectSFDC, String orderID, String checkName, String checkType, String checkResult, Boolean header) {
+        //TODO
+    }
 
 }
