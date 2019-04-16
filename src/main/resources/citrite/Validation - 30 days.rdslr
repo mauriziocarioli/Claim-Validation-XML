@@ -5,7 +5,7 @@ import java.lang.Number;
 rule "Validation - 30 days" extends "Is Follow On Order"
 	dialect "mvel"
 	when
-		>bre : BREObjectSFDC( orderID : request.order.orderHeader.orderID, request.order.orderHeader.orderCreationDate, d : request.rewardRegistration)
+		>bre : BREObjectSFDC( orderID : request.order.orderHeader.orderID, rd : request.rewardRegistration, cd : request.order.orderHeader.orderCreationDate)
 		>function : Helper( )
 	then
 		>function.registerValidation( bre, orderID, "Minimum Follow On Order Timeline Unmet", "STANDARD", "FAIL", "true" );
