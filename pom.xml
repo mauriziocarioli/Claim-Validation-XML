@@ -48,7 +48,7 @@
     <dependency>
       <groupId>citrite</groupId>
       <artifactId>BRE-XML</artifactId>
-      <version>jboss-1.0.0</version>
+      <version>jboss-1.0.1</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
