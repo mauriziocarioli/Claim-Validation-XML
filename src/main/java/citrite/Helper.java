@@ -1,8 +1,8 @@
 package citrite;
 
 import java.util.Date;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 
 public class Helper implements java.io.Serializable {
@@ -12,8 +12,8 @@ public class Helper implements java.io.Serializable {
     private Helper() {
     }
 
-    public static long daysBetweenDates(Date firstDate, Date secondDate) {
-        return ChronoUnit.DAYS.between(firstDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), secondDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+    public static long daysBetweenDates(XMLGregorianCalendar firstDate, XMLGregorianCalendar secondDate) {
+        return ChronoUnit.DAYS.between(firstDate.toGregorianCalendar().toZonedDateTime().toLocalDate(), secondDate.toGregorianCalendar().toZonedDateTime().toLocalDate());
     }
     
     public static void registerValidation(BREObjectSFDC breObjectSFDC, String orderID, String checkName, String checkType, String checkResult, Boolean header) {
