@@ -5,5 +5,6 @@ import java.lang.Number;
 rule "Is Follow On Order"
 	dialect "mvel"
 	when
+		Helper( followOnOrder() == true )
 	then
 end
