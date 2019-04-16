@@ -5,6 +5,6 @@ import java.lang.Number;
 rule "Some Rule"
 	dialect "mvel"
 	when
-		>BREObjectSFDC( orderID : request.order.orderHeader.orderID)
+		>BREObjectSFDC( orderID : request.order.orderHeader.orderID, d1 : request.order.orderHeader.orderCreationDate)
 	then
 end
