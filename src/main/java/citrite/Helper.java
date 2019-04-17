@@ -21,6 +21,10 @@ public class Helper implements java.io.Serializable {
         return ChronoUnit.DAYS.between(firstDate.toGregorianCalendar().toZonedDateTime().toLocalDate(), secondDate.toGregorianCalendar().toZonedDateTime().toLocalDate());
     }
     
+    public double totalSRP(Order order) {
+        return 10000.0;
+    }
+    
     public void registerValidation(BREObjectSFDC breObjectSFDC, String orderID, String checkName, String checkType, String checkResult, String header) {
         //TODO
     }
