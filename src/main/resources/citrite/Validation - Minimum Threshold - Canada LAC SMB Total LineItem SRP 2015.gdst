@@ -42,7 +42,17 @@
                 <factType>Request</factType>
                 <fieldName>order</fieldName>
                 <fieldType>Order</fieldType>
-                <parent class="org.drools.workbench.models.datamodel.rule.SingleFieldConstraint" reference="../../org.drools.workbench.models.datamodel.rule.SingleFieldConstraint"/>
+                <parent class="org.drools.workbench.models.datamodel.rule.SingleFieldConstraint">
+                  <constraintValueType>0</constraintValueType>
+                  <expression>
+                    <parts/>
+                    <index>2147483647</index>
+                  </expression>
+                  <parameters/>
+                  <factType>BREObjectSFDC</factType>
+                  <fieldName>request</fieldName>
+                  <fieldType>Request</fieldType>
+                </parent>
               </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
               <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
                 <constraintValueType>0</constraintValueType>
@@ -67,8 +77,64 @@
                 <factType>Order.OrderLineItems</factType>
                 <fieldName>orderLineItem</fieldName>
                 <fieldType>Collection</fieldType>
-                <parent class="org.drools.workbench.models.datamodel.rule.SingleFieldConstraint" reference="../../org.drools.workbench.models.datamodel.rule.SingleFieldConstraint[3]"/>
+                <parent class="org.drools.workbench.models.datamodel.rule.SingleFieldConstraint">
+                  <constraintValueType>0</constraintValueType>
+                  <expression>
+                    <parts/>
+                    <index>2147483647</index>
+                  </expression>
+                  <parameters/>
+                  <factType>Order</factType>
+                  <fieldName>orderLineItems</fieldName>
+                  <fieldType>Order.OrderLineItems</fieldType>
+                  <parent class="org.drools.workbench.models.datamodel.rule.SingleFieldConstraint">
+                    <constraintValueType>0</constraintValueType>
+                    <expression>
+                      <parts/>
+                      <index>2147483647</index>
+                    </expression>
+                    <parameters/>
+                    <factType>Request</factType>
+                    <fieldName>order</fieldName>
+                    <fieldType>Order</fieldType>
+                    <parent class="org.drools.workbench.models.datamodel.rule.SingleFieldConstraint">
+                      <constraintValueType>0</constraintValueType>
+                      <expression>
+                        <parts/>
+                        <index>2147483647</index>
+                      </expression>
+                      <parameters/>
+                      <factType>BREObjectSFDC</factType>
+                      <fieldName>request</fieldName>
+                      <fieldType>Request</fieldType>
+                    </parent>
+                  </parent>
+                </parent>
               </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+              <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+                <constraintValueType>0</constraintValueType>
+                <expression>
+                  <parts/>
+                  <index>2147483647</index>
+                </expression>
+                <parameters/>
+                <fieldBinding>order</fieldBinding>
+                <factType>Request</factType>
+                <fieldName>order</fieldName>
+                <fieldType>Order</fieldType>
+                <parent class="org.drools.workbench.models.datamodel.rule.SingleFieldConstraint">
+                  <constraintValueType>0</constraintValueType>
+                  <expression>
+                    <parts/>
+                    <index>2147483647</index>
+                  </expression>
+                  <parameters/>
+                  <factType>BREObjectSFDC</factType>
+                  <fieldName>request</fieldName>
+                  <fieldType>Request</fieldType>
+                </parent>
+              </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+              <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint reference="../org.drools.workbench.models.datamodel.rule.SingleFieldConstraint[2]/parent"/>
             </constraints>
           </constraintList>
           <factType>BREObjectSFDC</factType>
@@ -113,6 +179,16 @@
             <index>2147483647</index>
           </expression>
         </org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
+        <org.drools.workbench.models.datamodel.rule.FactPattern>
+          <constraintList>
+            <constraints/>
+          </constraintList>
+          <factType>Helper</factType>
+          <isNegated>false</isNegated>
+          <window>
+            <parameters/>
+          </window>
+        </org.drools.workbench.models.datamodel.rule.FactPattern>
       </definition>
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
