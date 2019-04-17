@@ -17,16 +17,6 @@ public class Helper implements java.io.Serializable {
         return true;
     }
     
-    public boolean dateIsBeforeDate(XMLGregorianCalendar firstDate, XMLGregorianCalendar secondDate) {
-        //TODO
-        return true;
-    }
-
-    public boolean dateIsAfterDate(XMLGregorianCalendar firstDate, XMLGregorianCalendar secondDate) {
-        //TODO
-        return true;
-    }
-
     public long daysBetweenDates(XMLGregorianCalendar firstDate, XMLGregorianCalendar secondDate) {
         return ChronoUnit.DAYS.between(firstDate.toGregorianCalendar().toZonedDateTime().toLocalDate(), secondDate.toGregorianCalendar().toZonedDateTime().toLocalDate());
     }
