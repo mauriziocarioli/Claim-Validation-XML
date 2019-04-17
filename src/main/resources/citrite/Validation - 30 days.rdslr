@@ -5,7 +5,7 @@ import java.lang.Number;
 rule "Validation - 30 days" extends "Is Follow On Order"
 	dialect "mvel"
 	when
-		>bre : BREObjectSFDC( orderID : request.order.orderHeader.orderID, rd : request.rewardRegistration, cd : request.order.orderHeader.orderCreationDate)
+		>bre : BREObjectSFDC( orderID : request.order.orderHeader.orderID, rd : request.rewardRegistration.rewardSubmittedDate, cd : request.order.orderHeader.orderCreationDate)
 		cd is before rd
 		>function : Helper( )
 	then
